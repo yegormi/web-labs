@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстраційна форма</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Ваше ім'я:</td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Пароль:</td>
+                <td>
+                    <input type="password" name="password"><br>
+                    <small>(може містити тільки цифри і букви латинського алфавіту)</small>
+                </td>
+            </tr>
+            <tr>
+                <td>Дата реєстрації:</td>
+                <td>
+                    <select name="day">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                    <select name="month">
+                        <option value="1">Січень</option>
+                        <option value="2">Лютий</option>
+                        <option value="3">Березень</option>
+                        <option value="4">Квітень</option>
+                        <option value="5">Травень</option>
+                        <option value="6">Червень</option>
+                        <option value="7">Липень</option>
+                        <option value="8">Серпень</option>
+                        <option value="9">Вересень</option>
+                        <option value="10">Жовтень</option>
+                        <option value="11">Листопад</option>
+                        <option value="12">Грудень</option>
+                    </select>
+                    <input type="text" name="year" maxlength="4" size="4" placeholder="Рік">
+                </td>
+            </tr>
+            <tr>
+                <td>Пол:</td>
+                <td>
+                    <input type="radio" name="gender" value="male"> Чоловічий
+                    <input type="radio" name="gender" value="female" checked> Жіночий
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" name="spam" checked>
+                    Так, я бажаю регулярно отримувати спам на свій поштовий ящик
+                </td>
+            </tr>
+            <tr>
+                <td>Скільки листів в день ви зазвичай отримуєте?</td>
+                <td>
+                    <input type="radio" name="emails" value="few"> Одне-два<br>
+                    <input type="radio" name="emails" value="some" checked> До 10<br>
+                    <input type="radio" name="emails" value="many"> Дуже багато
+                </td>
+            </tr>
+            <tr>
+                <td>Вкажіть, яким комп'ютерним напрямком ви захоплені:</td>
+                <td>
+                    <select name="interests" multiple size="6">
+                        <option>Комп'ютерна графіка (дизайн)</option>
+                        <option>Проектування</option>
+                        <option>Програмування</option>
+                        <option>Набір тексту</option>
+                        <option>Ігри</option>
+                        <option>Спілкування в мережі</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Ваші побажання до роботи поштової системи:</td>
+                <td><textarea name="wishes" rows="4" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td>Аватарка:</td>
+                <td>
+                    <input type="file" name="avatar"><br>
+                    <small>(розміром 100 x 100)</small>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="left">
+                    <input type="submit" value="Відправити дані">
+                    <input type="reset" value="Очистити форму">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

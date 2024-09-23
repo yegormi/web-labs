@@ -1,0 +1,291 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Піца Делівері - Розширена форма замовлення</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        :root {
+            --primary-color: #FF6B6B;
+            --secondary-color: #4ECDC4;
+            --text-color: #2C3E50;
+            --background-color: #F7F9FC;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--text-color);
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-size: 2.5em;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #E0E0E0;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .radio-group label,
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        select[multiple] {
+            height: 120px;
+        }
+
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            display: block;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #FF5252;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-group {
+            animation: fadeIn 0.5s ease forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🍕 Pizza Delivery™️</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Ваше ім'я:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Електронна пошта:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Номер телефону:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Адреса доставки:</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="pickup-date">Дата отримання:</label>
+                <input type="date" id="pickup-date" name="pickup-date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pickup-time">Час отримання:</label>
+                <input type="time" id="pickup-time" name="pickup-time" required>
+            </div>
+
+            <div class="form-group">
+                <label>Тип замовлення:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="order-type" value="delivery" required> Доставка</label>
+                    <label><input type="radio" name="order-type" value="pickup"> Самовивіз</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Розмір піци:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="size" value="small"> Маленька (25 см)</label>
+                    <label><input type="radio" name="size" value="medium"> Середня (30 см)</label>
+                    <label><input type="radio" name="size" value="large"> Велика (35 см)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Тип тіста:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="crust" value="thin"> Тонке</label>
+                    <label><input type="radio" name="crust" value="thick"> Товсте</label>
+                    <label><input type="radio" name="crust" value="stuffed"> З начинкою в бортиках</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="sauce">Соус:</label>
+                <select id="sauce" name="sauce" required>
+                    <option value="">Виберіть соус</option>
+                    <option value="tomato">Томатний</option>
+                    <option value="bbq">Барбекю</option>
+                    <option value="garlic">Часниковий</option>
+                    <option value="ranch">Ранч</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="cheese">Сир:</label>
+                <select id="cheese" name="cheese" required>
+                    <option value="">Виберіть сир</option>
+                    <option value="mozzarella">Моцарелла</option>
+                    <option value="cheddar">Чеддер</option>
+                    <option value="parmesan">Пармезан</option>
+                    <option value="gouda">Гауда</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="toppings">Топінги (Виберіть декілька):</label>
+                <select id="toppings" name="toppings" multiple>
+                    <option value="extra-cheese">Додатковий сир</option>
+                    <option value="pepperoni">Пепероні</option>
+                    <option value="mushrooms">Гриби</option>
+                    <option value="onions">Цибуля</option>
+                    <option value="sausage">Ковбаса</option>
+                    <option value="bacon">Бекон</option>
+                    <option value="bell-peppers">Болгарський перець</option>
+                    <option value="olives">Оливки</option>
+                    <option value="pineapple">Ананас</option>
+                    <option value="ham">Шинка</option>
+                    <option value="chicken">Курка</option>
+                    <option value="spinach">Шпинат</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="drinks">Напої:</label>
+                <select id="drinks" name="drinks" multiple>
+                    <option value="cola">Кола</option>
+                    <option value="sprite">Спрайт</option>
+                    <option value="fanta">Фанта</option>
+                    <option value="water">Вода</option>
+                    <option value="juice">Сік</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="special-instructions">Особливі побажання:</label>
+                <textarea id="special-instructions" name="special-instructions" rows="3"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="promo-code">Промокод:</label>
+                <input type="text" id="promo-code" name="promo-code">
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="terms" name="terms" required>
+                    Я погоджуюся з умовами та правилами
+                </label>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    Підписатися на розсилку новин та акцій
+                </label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn">Оформити замовлення</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
