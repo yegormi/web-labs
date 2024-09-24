@@ -2,22 +2,22 @@
 <html lang="uk">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza Delivery</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
 
         :root {
-            --primary-color: #FF6B6B;
-            --secondary-color: #4ECDC4;
-            --text-color: #2C3E50;
-            --background-color: #F7F9FC;
-            --error-color: #E74C3C;
+            --primary-color: #ff6b6b;
+            --secondary-color: #4ecdc4;
+            --text-color: #2c3e50;
+            --background-color: #f7f9fc;
+            --error-color: #e74c3c;
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: "Roboto", sans-serif;
             background-color: var(--background-color);
             margin: 0;
             padding: 20px;
@@ -66,7 +66,7 @@
         textarea {
             width: 100%;
             padding: 12px;
-            border: 2px solid #E0E0E0;
+            border: 2px solid #e0e0e0;
             border-radius: 8px;
             box-sizing: border-box;
             font-size: 16px;
@@ -126,7 +126,7 @@
         }
 
         .btn:hover {
-            background-color: #FF5252;
+            background-color: #ff5252;
         }
 
         .btn:active {
@@ -159,64 +159,77 @@
         <form>
             <div class="form-group">
                 <label for="name">Ваше ім'я:</label>
-                <input type="text" id="name" name="name" required pattern="^[А-Яа-яҐґЄєІіЇї\s'-]{2,50}$">
+                <input type="text" id="name" name="name" required pattern="^[А-ЩЬЮЯҐЄІЇа-щьюяґєії'\s-]{2,50}$"
+                    placeholder="Єгор Миропольцев" oninvalid="this.setCustomValidity('Enter only ukranian letters')"
+                    onchange="this.setCustomValidity('')" />
             </div>
 
             <div class="form-group">
                 <label for="email">Електронна пошта:</label>
-                <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                <input type="email" id="email" name="email" required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="example@email.com"
+                    oninvalid="this.setCustomValidity('Enter a valid email address')"
+                    onchange="this.setCustomValidity('')" />
             </div>
 
             <div class="form-group">
                 <label for="phone">Номер телефону:</label>
-                <input type="tel" id="phone" name="phone" required pattern="^\+?3?8?(0\d{9})$">
+                <input type="tel" id="phone" name="phone" required pattern="\+?3?8?(0\d{9})" placeholder="+380501234567"
+                    oninvalid="this.setCustomValidity('Enter a valid phone number in format of +380501234567')"
+                    onchange="this.setCustomValidity('')" />
             </div>
 
             <div class="form-group">
                 <label for="address">Адреса доставки:</label>
-                <textarea id="address" name="address" rows="3" required minlength="10" maxlength="200"></textarea>
+                <textarea id="address" name="address" rows="3" required minlength="10" maxlength="200"
+                    placeholder="вул. Європейська, 10, кв. 52, Дніпро, 49002"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="pickup-date">Дата отримання:</label>
-                <input type="date" id="pickup-date" name="pickup-date" required>
+                <input type="date" id="pickup-date" name="pickup-date" required />
             </div>
 
             <div class="form-group">
                 <label for="pickup-time">Час отримання:</label>
-                <input type="time" id="pickup-time" name="pickup-time" required>
+                <input type="time" id="pickup-time" name="pickup-time" required />
             </div>
 
             <div class="form-group">
                 <label>Тип замовлення:</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="order-type" value="delivery" required> Доставка</label>
-                    <label><input type="radio" name="order-type" value="pickup"> Самовивіз</label>
+                    <label><input type="radio" name="order-type" value="delivery" required />
+                        Доставка</label>
+                    <label><input type="radio" name="order-type" value="pickup" />
+                        Самовивіз</label>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Розмір піци:</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="size" value="small"> Маленька (25 см)</label>
-                    <label><input type="radio" name="size" value="medium"> Середня (30 см)</label>
-                    <label><input type="radio" name="size" value="large"> Велика (35 см)</label>
+                    <label><input type="radio" name="size" value="small" /> Маленька (25
+                        см)</label>
+                    <label><input type="radio" name="size" value="medium" /> Середня (30
+                        см)</label>
+                    <label><input type="radio" name="size" value="large" /> Велика (35
+                        см)</label>
                 </div>
             </div>
 
             <div class="form-group">
                 <label>Тип тіста:</label>
                 <div class="radio-group">
-                    <label><input type="radio" name="crust" value="thin"> Тонке</label>
-                    <label><input type="radio" name="crust" value="thick"> Товсте</label>
-                    <label><input type="radio" name="crust" value="stuffed"> З начинкою в бортиках</label>
+                    <label><input type="radio" name="crust" value="thin" /> Тонке</label>
+                    <label><input type="radio" name="crust" value="thick" /> Товсте</label>
+                    <label><input type="radio" name="crust" value="stuffed" /> З начинкою в
+                        бортиках</label>
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="sauce">Соус:</label>
                 <select id="sauce" name="sauce" required>
-                    <option value="">Виберіть соус</option>
                     <option value="tomato">Томатний</option>
                     <option value="bbq">Барбекю</option>
                     <option value="garlic">Часниковий</option>
@@ -227,7 +240,6 @@
             <div class="form-group">
                 <label for="cheese">Сир:</label>
                 <select id="cheese" name="cheese" required>
-                    <option value="">Виберіть сир</option>
                     <option value="mozzarella">Моцарелла</option>
                     <option value="cheddar">Чеддер</option>
                     <option value="parmesan">Пармезан</option>
@@ -266,24 +278,25 @@
 
             <div class="form-group">
                 <label for="special-instructions">Особливі побажання:</label>
-                <textarea id="special-instructions" name="special-instructions" rows="3"></textarea>
+                <textarea id="special-instructions" name="special-instructions" rows="3"
+                    placeholder="Наприклад: без цибулі, додатковий соус"></textarea>
             </div>
 
             <div class="form-group">
                 <label for="promo-code">Промокод:</label>
-                <input type="text" id="promo-code" name="promo-code">
+                <input type="text" id="promo-code" name="promo-code" placeholder="Введіть промокод, якщо є" />
             </div>
 
             <div class="form-group checkbox-group">
                 <label>
-                    <input type="checkbox" id="terms" name="terms" required>
+                    <input type="checkbox" id="terms" name="terms" required />
                     Я погоджуюся з умовами та правилами
                 </label>
             </div>
 
             <div class="form-group checkbox-group">
                 <label>
-                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" />
                     Підписатися на розсилку новин та акцій
                 </label>
             </div>
