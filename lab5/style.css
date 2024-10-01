@@ -1,0 +1,30 @@
+.menu
+{
+    width: 220px;
+    margin-left: 10px ;
+    margin-right: 10px;
+    background-color: gray;
+}
+.menu-text{
+    vertical-align: top;
+    text-align:left ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.menu-text-link
+{  
+    list-style-type: none;
+    padding-left: 20px;
+    line-height:153%;      
+    background-image: url(web_lab_5/fon.jpg);
+    background-repeat: repeat-y;
+}
+nav 
+{
+    float: left;
+}
+article {
+    float: left;
+    width:80%;
+  }
