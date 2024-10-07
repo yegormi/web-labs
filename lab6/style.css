@@ -1,0 +1,65 @@
+﻿body {
+    color: #333;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    letter-spacing: 2px;
+}
+
+.cursive {
+    font-style: italic;
+    text-decoration: none;
+}
+
+.styled {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 25px;
+    text-indent: 50px;
+}
+
+.rich {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 25px;
+}
+
+.perenos {
+    white-space: nowrap;
+}
+
+.red {
+    color: red;
+    text-transform: uppercase;
+}
+
+.special {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 12pt;
+    text-transform: uppercase;
+    letter-spacing: 200%;
+    text-decoration: underline;
+    line-height: 2;
+}
+
+.heading1 {
+    font-family: Tahoma, sans-serif;
+    font-size: 30pt;
+    text-align: center;
+}
+
+.heading2 {
+    font-family: Times New Roman, serif;
+    font-size: 22pt;
+    color: blue;
+}
+
+.heading3 {
+    font-family: Arial, sans-serif;
+    font-size: 18pt;
+    font-style: italic;
+    color: green;
+}

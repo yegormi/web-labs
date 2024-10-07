@@ -1,0 +1,153 @@
+﻿body {
+    background-color: #f9f9f9;
+    font-family: "Arial", sans-serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.main-title {
+    text-align: center;
+    font-family: "Helvetica", sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #0073e6;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: lighter;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+.heading {
+    font-family: "Times New Roman", serif;
+    font-size: 28px;
+    color: #333;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    background-color: #FFD700;
+    padding: 0 5px;
+    font-weight: bold;
+    color: #000;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.quote {
+    font-family: "Georgia", serif;
+    font-size: 18px;
+    font-style: italic;
+    border-left: 5px solid #ccc;
+    margin: 20px 0;
+    padding-left: 15px;
+    color: #555;
+}
+
+.highlight-box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-left: 10px solid #0073e6;
+    margin: 20px 0;
+}
+
+.highlight-box h3 {
+    margin-top: 0;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #0073e6;
+}
+
+.grid-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 30%;
+}
+
+.grid-item h3 {
+    font-size: 22px;
+    color: #0073e6;
+}
+
+.image-gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 60%;
+}
+
+.image-gallery {
+    flex: 1;
+    max-width: 40%;
+    text-align: right;
+}
+
+.gallery-img {
+    max-width: 100%;
+    height: auto;
+    border: 3px solid #0073e6;
+    border-radius: 10px;
+}
+
+.caption {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.cultural-impact {
+    list-style-type: square;
+    padding-left: 20px;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-heading {
+    font-size: 24px;
+    color: #FFD700;
+}
